@@ -14,7 +14,7 @@ var autoprefixer = require("autoprefixer");
 var cssnano = require("cssnano");
 
 gulp.task("watch", ["sass-compile"], function () {
-	gulp.watch("src/style.scss", ["sass-compile"]);
+	gulp.watch(["src/style.scss","src/scss/**/*.scss"], ["sass-compile"]);
 });
 
 gulp.task("default", ["sass-compile"]);
