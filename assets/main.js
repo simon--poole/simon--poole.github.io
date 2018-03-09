@@ -18,12 +18,12 @@ landing.style.height="100%";
 landing.width = landing.offsetWidth;
 landing.height = landing.offsetHeight;
 var pattern;
-var variance = 1;
+var variance = 100;
 var toggle = 1;
 var seed = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 24);
 function setCanvas(){
-	if(variance >= 200) toggle = -1;
-	if(variance <= 0) {
+	if(variance >= 150) toggle = -1;
+	if(variance <= 75) {
 		toggle = 1;
 		seed = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 24);
 	}
