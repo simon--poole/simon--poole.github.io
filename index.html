@@ -3,36 +3,56 @@
 <head>
     <title>Simon Poole // Web Developer Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans|Montserrat" rel="stylesheet">
     <link href="/assets/style.css" rel="stylesheet" />
     <script>
             $=function(t,e,n,i,o,r,s,u,c,f,l,h){return h=function(t,e){return new h.i(t,e)},h.i=function(i,o){n.push.apply(this,i?i.nodeType||i==t?[i]:""+i===i?/</.test(i)?((u=e.createElement(o||"q")).innerHTML=i,u.children):(o&&h(o)[0]||e).querySelectorAll(i):/f/.test(typeof i)?/c/.test(e.readyState)?i():h(e).on("DOMContentLoaded",i):i:n)},h.i[l="prototype"]=(h.extend=function(t){for(f=arguments,u=1;u<f.length;u++)if(l=f[u])for(c in l)t[c]=l[c];return t})(h.fn=h[l]=n,{on:function(t,e){return t=t.split(i),this.map(function(n){(i[u=t[0]+(n.b$=n.b$||++o)]=i[u]||[]).push([e,t[1]]),n["add"+r](t[0],e)}),this},off:function(t,e){return t=t.split(i),l="remove"+r,this.map(function(n){if(f=i[t[0]+n.b$],u=f&&f.length)for(;c=f[--u];)e&&e!=c[0]||t[1]&&t[1]!=c[1]||(n[l](t[0],c[0]),f.splice(u,1));else!t[1]&&n[l](t[0],e)}),this},is:function(t){return u=this[0],(u.matches||u["webkit"+s]||u["moz"+s]||u["ms"+s]).call(u,t)}}),h}(window,document,[],/\.(.+)/,0,"EventListener","MatchesSelector");
     </script>
 </head>
 <body>
-<header>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="container">
-            <div class="navbar-brand">
-                <a href="/" class="navbar-item"><i class="material-icons">&#xE88A;</i></a>
-                <button class="button navbar-burger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-            <div class="navbar-menu">
-                <div class="navbar-start"></div>
-                <div class="navbar-end">
-                    <a href="/about" class="navbar-item">About Me</a>
-                    <a href="/projects" class="navbar-item">Portfolio Projects</a>
-                    <a href="/contact" class="navbar-item">Get In Touch</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-</header>
 <div id="body">
+	<canvas class="landing-canvas" id="canvas"></canvas>
+	<div class="landing">
+		<div class="call-out-container">
+			<div class="call-out has-text-centered">
+				<h1>Hi, I'm <span class="em">Simon Poole.</span></h1>
+				<h2>I specialise in full-stack development.</h2>
+			</div>
+			<br />
+			<div class="action">
+				View my Portfolio
+				<br />
+				<i class="material-icons">&#xE313;</i>
+			</div>
+		</div>
+		<!-- <div class="lights-1"></div>
+		<div class="lights-2"></div>
+		<div class="lights-3"></div>
+		<div class="lights-4"></div>
+		<div class="lights-5"></div>
+		<div class="lights-6"></div>
+		<div class="lights-7"></div>
+		<div class="lights-8"></div>
+		<div class="lights-9"></div>
+		<div class="lights-10"></div> -->
+	</div>
+	<nav class="navbar" id="nav" role="navigation" aria-label="main navigation">
+		<div class="container">
+			<button class="button navbar-burger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<div class="navbar-menu">
+				<div class="navbar-end">
+					<a href="/about" class="navbar-item">About</a>
+					<a href="/projects" class="navbar-item">Portfolio</a>
+					<a href="/contact" class="navbar-item">Contact</a>
+				</div>
+			</div>
+		</div>
+	</nav>
     <div class="container">
 
     </div>
@@ -42,6 +62,7 @@
 
     </div>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/1.2.0/trianglify.min.js"></script>
 <script src="assets/main.js"></script>
 </body>
 

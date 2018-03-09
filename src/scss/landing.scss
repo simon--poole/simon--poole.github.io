@@ -1,0 +1,126 @@
+/* Keyframes */
+@keyframes parallax {
+	from {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+@function multiple-box-shadows($stars, $size, $color){
+	$box-shadow: random(100)+'vw ' + random(100)+'vh ' + $color;
+	@for $i from 1 through $stars {
+		 $box-shadow: $box-shadow + ', ' + random(100)+'vw ' + random(100)+'vh ' + $color;
+	}
+	@return unquote($box-shadow);
+}
+@mixin parallax-layer($stars, $size: 1px, $timer: 2(random(10) * 1s) + 10s, $color: white, $easing: linear){
+	$shadows: multiple-box-shadows($stars, $size, $color);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: $size;
+	height: $size;
+	background: transparent;
+	pointer-events: none;
+	box-shadow: $shadows;
+	animation: parallax $timer $easing infinite;
+	border-radius: 50%;
+	&:after {
+		content: " ";
+		position: absolute;
+		width: $size;
+		height: $size;
+		top: 100vh;
+		box-shadow: $shadows;
+	}
+}
+
+.landing {
+	position: absolute;
+	display: flex;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba($dark, 0.1);
+	color: $light;
+	overflow: hidden;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	z-index: 1;
+}
+.landing-canvas {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 0;
+	opacity: 0.25;
+}
+.call-out-container {
+	position: relative;
+	z-index: 2;
+}
+.call-out, .action {
+	background: rgba($dark, 0.75);
+}
+.call-out {
+	padding: 24px;
+	h1 {
+		font-size: 36px;
+	}
+	h2 {
+		font-size: 24px;
+	}
+	.em {
+		color: $red;
+	}
+}
+.action {
+	width: fit-content;
+	margin: auto;
+	padding: 12px 12px 0;
+	text-align: center;
+	transition: background 0.3s linear;
+	&:hover {
+		background: $dark;
+		cursor: pointer;
+	}
+}
+
+// .lights-1 {
+// 	@include parallax-layer(random(15), random(100) * 3px, (random(10) * 1s) + 10s, rgba($lights1, random(5) * 0.2));
+// }
+// .lights-2 {
+// 	@include parallax-layer(random(15), random(100) * 3px, (random(10) * 1s) + 10s, rgba($lights2, random(5) * 0.2));
+// }
+// .lights-3 {
+// 	@include parallax-layer(random(15), random(100) * 3px, (random(10) * 1s) + 10s, rgba($lights3, random(5) * 0.2));
+// }
+// .lights-4 {
+// 	@include parallax-layer(random(15), random(100) * 3px, (random(10) * 1s) + 10s, rgba($lights4, random(5) * 0.2));
+// }
+// .lights-5 {
+// 	@include parallax-layer(random(15), random(100) * 3px, (random(10) * 1s) + 10s, rgba($lights5, random(5) * 0.2));
+// }
+// .lights-6 {
+// 	@include parallax-layer(random(15), random(100) * 3px, (random(10) * 1s) + 10s, rgba($lights6, random(5) * 0.2));
+// }
+// .lights-7 {
+// 	@include parallax-layer(random(15), random(100) * 3px, (random(10) * 1s) + 10s, rgba($lights7, random(5) * 0.2));
+// }
+// .lights-8 {
+// 	@include parallax-layer(random(15), random(100) * 3px, (random(10) * 1s) + 10s, rgba($lights8, random(5) * 0.2));
+// }
+// .lights-9 {
+// 	@include parallax-layer(random(15), random(100) * 3px, (random(10) * 1s) + 10s, rgba($lights9, random(5) * 0.2));
+// }
+// .lights-10 {
+// 	@include parallax-layer(random(15), random(100) * 3px, (random(10) * 1s) + 10s, rgba($lights10, random(5) * 0.2));
+// }

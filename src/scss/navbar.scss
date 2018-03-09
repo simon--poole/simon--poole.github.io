@@ -1,0 +1,30 @@
+.navbar {
+	position: absolute!important;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 2;
+	border-top: 5px solid $red;
+	border-bottom: 5px solid $red;
+	margin-bottom: -5px;
+	background: $dark;
+}
+.navbar-end {
+	justify-content: space-around;
+	margin: 0;
+	width: 100%;
+}
+a.navbar-item {
+	flex: 1 1 25%;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Fira Sans', sans-serif;
+	color: $light;
+	border-top: 5px solid $red;
+	margin-top: -5px;
+	&:hover {
+		background: rgba($light, 0.1);
+		border-top: 5px solid $light;
+		color: $red;
+	}
+}
