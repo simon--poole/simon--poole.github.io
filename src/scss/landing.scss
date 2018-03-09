@@ -46,7 +46,7 @@
 	left: 0;
 	bottom: 0;
 	right: 0;
-	background: rgba($dark, 0.1);
+	background: rgba($dark, 0.25);
 	color: $light;
 	overflow: hidden;
 	flex-direction: column;
@@ -61,7 +61,6 @@
 	bottom: 0;
 	right: 0;
 	z-index: 0;
-	opacity: 0.25;
 }
 .call-out-container {
 	position: relative;
@@ -93,34 +92,3 @@
 		cursor: pointer;
 	}
 }
-
-// .lights-1 {
-// 	@include parallax-layer(random(15), random(100) * 3px, (random(10) * 1s) + 10s, rgba($lights1, random(5) * 0.2));
-// }
-// .lights-2 {
-// 	@include parallax-layer(random(15), random(100) * 3px, (random(10) * 1s) + 10s, rgba($lights2, random(5) * 0.2));
-// }
-// .lights-3 {
-// 	@include parallax-layer(random(15), random(100) * 3px, (random(10) * 1s) + 10s, rgba($lights3, random(5) * 0.2));
-// }
-// .lights-4 {
-// 	@include parallax-layer(random(15), random(100) * 3px, (random(10) * 1s) + 10s, rgba($lights4, random(5) * 0.2));
-// }
-// .lights-5 {
-// 	@include parallax-layer(random(15), random(100) * 3px, (random(10) * 1s) + 10s, rgba($lights5, random(5) * 0.2));
-// }
-// .lights-6 {
-// 	@include parallax-layer(random(15), random(100) * 3px, (random(10) * 1s) + 10s, rgba($lights6, random(5) * 0.2));
-// }
-// .lights-7 {
-// 	@include parallax-layer(random(15), random(100) * 3px, (random(10) * 1s) + 10s, rgba($lights7, random(5) * 0.2));
-// }
-// .lights-8 {
-// 	@include parallax-layer(random(15), random(100) * 3px, (random(10) * 1s) + 10s, rgba($lights8, random(5) * 0.2));
-// }
-// .lights-9 {
-// 	@include parallax-layer(random(15), random(100) * 3px, (random(10) * 1s) + 10s, rgba($lights9, random(5) * 0.2));
-// }
-// .lights-10 {
-// 	@include parallax-layer(random(15), random(100) * 3px, (random(10) * 1s) + 10s, rgba($lights10, random(5) * 0.2));
-// }

@@ -27,11 +27,11 @@ function setCanvas(){
 		toggle = 1;
 		seed = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 24);
 	}
-	variance += (0.25 * toggle);
+	variance += (0.05 * toggle);
 	pattern = Trianglify({
 		width: landing.width,
 		height: landing.height,
-		x_colors: 'PuRd',
+		x_colors: ['#ABC8C0', '#9D5C63', '#8ACDEA', '#7F7CAF', '#E39774'],
 		seed: seed,
 		cell_size: 50,
 		variance: variance
