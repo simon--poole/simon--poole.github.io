@@ -13,10 +13,14 @@ $('.navbar-burger').on('click', function(e){
     $('.navbar-menu').toggleClass('is-active');
 })
 var landing = document.getElementById('canvas');
-landing.style.width="100%";
-landing.style.height="100%";
-landing.width = landing.offsetWidth;
-landing.height = landing.offsetHeight;
+function sizeCanvas(){
+	console.log("size called");
+	landing.style.width="100%";
+	landing.style.height="100%";
+	landing.width = landing.offsetWidth;
+	landing.height = landing.offsetHeight;
+}
+sizeCanvas();
 var pattern;
 var variance = 100;
 var toggle = 1;
@@ -36,7 +40,7 @@ function setCanvas(){
 		cell_size: 50,
 		variance: variance
 	}).canvas(landing);
-	document.getElementById('body').replaceChild(pattern, landing);
 }
 setInterval(setCanvas, 1)
+window.addEventListener("resize", sizeCanvas);
 

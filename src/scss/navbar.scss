@@ -21,10 +21,12 @@ a.navbar-item {
 	font-family: 'Fira Sans', sans-serif;
 	color: $light;
 	border-top: 2px solid $red;
-	margin-top: -2px;
+	border-bottom: 2px solid $red;
+	margin: -2px auto;
 	&:hover {
 		background: rgba($light, 0.1);
 		border-top: 2px solid $light;
+		border-bottom: 2px solid $light;
 		color: $red;
 	}
 }
