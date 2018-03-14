@@ -66,7 +66,7 @@
 	position: relative;
 	z-index: 2;
 }
-.call-out, .action {
+.call-out, .action a{
 	background: rgba($dark, 0.75);
 }
 .call-out {
@@ -82,13 +82,25 @@
 	}
 }
 .action {
-	width: fit-content;
-	margin: auto;
-	padding: 12px 12px 0;
-	text-align: center;
-	transition: background 0.3s linear;
-	&:hover {
-		background: $dark;
-		cursor: pointer;
+	width: 100%;
+	display: inline-flex;
+	justify-content: space-around;
+	a {
+		padding: 12px;
+		@include transition(color);
+		color: $red;
+		font-weight: bold;
+		display: inline-flex;
+		align-items: center;
+		svg {
+			margin: 0 6px;
+		}
+		&:hover {
+			color: $light;
+			background: $dark;
+		}
 	}
+}
+.landing-fill {
+	margin-top: 100vh;
 }

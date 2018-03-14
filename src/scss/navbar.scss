@@ -23,10 +23,12 @@ a.navbar-item {
 	border-top: 2px solid $red;
 	border-bottom: 2px solid $red;
 	margin: -2px auto;
+	font-size: 16px;
 	&:hover {
 		background: rgba($light, 0.1);
-		border-top: 2px solid $light;
-		border-bottom: 2px solid $light;
+		border-top: rgba($light, 0.1);
+		border-bottom: rgba($light, 0.1);
 		color: $red;
+		text-decoration: underline;
 	}
 }

@@ -1,0 +1,10 @@
+.footer {
+	background: $dark;
+	color: $light!important;
+	a, strong {
+		color: $red;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+}
