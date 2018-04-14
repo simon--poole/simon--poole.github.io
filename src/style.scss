@@ -2,6 +2,9 @@ $dark: #1c1c1c;
 $light: #F4F7F5;
 $red: #9D5C63;
 
+@mixin transition($param: all, $time: 0.3s, $function: ease-in-out) {
+    transition: $param $time $function;
+}
 
 @import "scss/common.scss";
 @import "scss/landing.scss";

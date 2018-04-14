@@ -12,21 +12,21 @@
 	align-items: center;
 	z-index: 2;
 }
-#landing-fg, #landing-bg {
+#landing-fg{
 	position: absolute;
 	top: 0;
 	left: 0;
 	bottom: 0;
 	right: 0;
-
 }
-#landing-fg {
-	background: url('/assets/skyline.png');
-	z-index: 1;
+#body {
+	background: radial-gradient(circle at bottom, navy 0, $dark 90%);
 }
 #landing-bg {
-	background: linear-gradient(to top, rgb(5, 3, 51) 0%, rgb(74, 60, 112) 13%, rgb(241, 236, 239) 28%, rgb(187, 240, 253) 42%, rgb(80, 181, 227) 62%, rgb(48, 122, 200) 82%, rgb(35, 88, 187) 100%);
-	z-index: 0
+	background: linear-gradient(to bottom, $dark 0%, $red 60%);
+	opacity: 0.3;
+	z-index: 0;
+	height: 100vh;
 }
 .landing-canvas {
 	position: absolute;
@@ -36,11 +36,11 @@
 	right: 0;
 	z-index: 0;
 }
-.call-out-container {
+call-out-container {
 	position: relative;
 	z-index: 2;
 }
-.call-out, .action {
+.call-out, .action a{
 	background: rgba($dark, 0.75);
 }
 .call-out {
@@ -56,13 +56,22 @@
 	}
 }
 .action {
-	width: fit-content;
-	margin: auto;
-	padding: 12px 12px 0;
-	text-align: center;
-	transition: background 0.3s linear;
-	&:hover {
-		background: $dark;
-		cursor: pointer;
+	width: 100%;
+	display: inline-flex;
+	justify-content: space-around;
+	a {
+		padding: 12px;
+		@include transition(color);
+		color: $red;
+		font-weight: bold;
+		display: inline-flex;
+		align-items: center;
+		svg {
+			margin: 0 6px;
+		}
+		&:hover {
+			color: $light;
+			background: $dark;
+		}
 	}
 }
