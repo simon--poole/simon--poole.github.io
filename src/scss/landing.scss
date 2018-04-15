@@ -1,44 +1,3 @@
-/* Keyframes */
-@keyframes parallax {
-	from {
-		opacity: 0;
-	}
-	50% {
-		opacity: 1;
-	}
-	to {
-		opacity: 0;
-	}
-}
-@function multiple-box-shadows($stars, $size, $color){
-	$box-shadow: random(100)+'vw ' + random(100)+'vh ' + $color;
-	@for $i from 1 through $stars {
-		 $box-shadow: $box-shadow + ', ' + random(100)+'vw ' + random(100)+'vh ' + $color;
-	}
-	@return unquote($box-shadow);
-}
-@mixin parallax-layer($stars, $size: 1px, $timer: 2(random(10) * 1s) + 10s, $color: white, $easing: linear){
-	$shadows: multiple-box-shadows($stars, $size, $color);
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: $size;
-	height: $size;
-	background: transparent;
-	pointer-events: none;
-	box-shadow: $shadows;
-	animation: parallax $timer $easing infinite;
-	border-radius: 50%;
-	&:after {
-		content: " ";
-		position: absolute;
-		width: $size;
-		height: $size;
-		top: 100vh;
-		box-shadow: $shadows;
-	}
-}
-
 .landing {
 	position: absolute;
 	display: flex;
@@ -46,13 +5,28 @@
 	left: 0;
 	bottom: 0;
 	right: 0;
-	background: rgba($dark, 0.25);
 	color: $light;
 	overflow: hidden;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	z-index: 1;
+	z-index: 2;
+}
+#landing-fg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+#body {
+	background: radial-gradient(circle at bottom, navy 0, $dark 90%);
+}
+#landing-bg {
+	background: linear-gradient(to bottom, $dark 0%, $red 60%);
+	opacity: 0.3;
+	z-index: 0;
+	height: 100vh;
 }
 .landing-canvas {
 	position: absolute;
@@ -62,7 +36,7 @@
 	right: 0;
 	z-index: 0;
 }
-.call-out-container {
+call-out-container {
 	position: relative;
 	z-index: 2;
 }

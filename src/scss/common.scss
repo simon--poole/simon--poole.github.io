@@ -16,3 +16,14 @@ body {
 	max-width: 24px;
 	max-height: 24px;
 }
+.sprite-container {
+	position: absolute;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+}
+.sprite-icon {
+	fill: currentColor;
+	max-width: 24px;
+	max-height: 24px;
+}
