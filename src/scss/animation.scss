@@ -1,0 +1,54 @@
+@keyframes landing-box {
+    from {
+        background: transparent;
+    }
+    to {
+        background: rgba($dark, .8);
+    }
+}
+@keyframes landing-h1 {
+    from {
+        opacity: 0;
+        transform: translateY(-24px);
+        filter: blur(3px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0px);
+    }
+}
+@keyframes landing-h2 {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+        filter: blur(3px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0px);
+    }
+}
+@keyframes landing-em {
+    from {
+        visibility: hidden;
+        transform: scaleX(0);
+    }
+    to {
+        visibility: visible;
+        transform: scaleX(1);
+    }
+}
+@keyframes landing-actions {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+        filter: blur(3px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0px);
+    }
+}

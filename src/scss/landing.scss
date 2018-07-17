@@ -1,80 +1,89 @@
-.landing {
-	position: absolute;
-	display: flex;
+.gradient {
+	background: linear-gradient(180deg,#1c1c1c 0,#9d5c63 60%);
+	opacity: .3;
 	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	color: $light;
-	overflow: hidden;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
-	z-index: 2;
-}
-#landing-fg{
 	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-}
-#body {
-	background: radial-gradient(circle at bottom, navy 0, $dark 90%);
-}
-#landing-bg {
-	background: linear-gradient(to bottom, $dark 0%, $red 60%);
-	opacity: 0.3;
-	z-index: 0;
 	height: 100vh;
+	width: 100%;
 }
-.landing-canvas {
-	position: absolute;
-	left: 0;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	z-index: 0;
-}
-call-out-container {
+.landing {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	position: relative;
-	z-index: 2;
-}
-.call-out, .action a{
-	background: rgba($dark, 0.75);
+	z-index: 3;
+	background: url('/assets/pattern.png') fixed;
 }
 .call-out {
+	position: relative;
+	z-index: 5;
+}
+.call-out .text-center {
 	padding: 24px;
+	color: $light;
+	animation: landing-box 0.5s ease-in-out 0.5s forwards;
 	h1 {
-		font-size: 36px;
+		animation: landing-h1 0.5s ease-in-out 0.5s backwards;
 	}
 	h2 {
-		font-size: 24px;
+		animation: landing-h2 0.5s ease-in-out 1s backwards;
+		.em:before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 5px;
+			bottom: 0;
+			left: 0;
+			background: $red;
+			border-radius: 5px;
+			transform-origin: left;
+		}
+		.em-1:before {
+			animation: landing-em 0.5s ease-in-out 1.5s backwards;
+		}
+		.em-2:before {
+			animation: landing-em 0.5s ease-in-out 1.75s backwards;
+		}
 	}
 	.em {
 		color: $red;
+		position: relative;
 	}
+}
+.scroll-c2a {
+	position: absolute;
+	bottom: 24px;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
 }
 .action {
-	width: 100%;
-	display: inline-flex;
+	display: flex;
 	justify-content: space-around;
 	a {
-		padding: 12px;
-		@include transition(color);
-		color: $red;
+		animation: landing-actions 0.5s ease-in-out 2s backwards;
+		padding: 12px 24px;
+		color: $light!important;
+		text-decoration: none!important;
+		background: rgba($dark, .8);
 		font-weight: bold;
-		display: inline-flex;
-		align-items: center;
-		svg {
-			margin: 0 6px;
+		position: relative;
+		&:before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 5px;
+			bottom: 0;
+			left: 0;
+			background: $red;
+			border-radius: 5px;
+			transform: scaleX(0);
+			@include transition();
 		}
-		&:hover {
-			color: $light;
-			background: $dark;
+		&:hover:before {
+			transform: scaleX(1);
 		}
 	}
-}
-.landing-fill {
-	margin-top: 100vh;
 }

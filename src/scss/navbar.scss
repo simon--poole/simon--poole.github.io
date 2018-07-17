@@ -1,39 +1,10 @@
-.navbar {
-	position: absolute!important;
-	bottom: 0;
-	left: 0;
-	width: 100%;
+ul.scrolled-nav {
+	position: fixed;
+	right: 12px;
+	top: 12px;
+	justify-content: flex-end;
 	z-index: 2;
-	border-top: 2px solid $red;
-	border-bottom: 2px solid $red;
-	margin-bottom: -2px;
-	background: $dark;
-}
-.navbar-end {
-	justify-content: space-around;
-	margin: 0;
-	width: 100%;
-}
-a.navbar-item {
-	flex: 1 1 25%;
-	justify-content: center;
-	align-items: center;
-	font-family: 'Fira Sans', sans-serif;
-	color: $light;
-	border-top: 2px solid $red;
-	border-bottom: 2px solid $red;
-	margin: -2px auto;
-	&:hover {
-		background: rgba($light, 0.1);
-		color: $red;
-		text-decoration: underline;
-	}
-}
-@media screen and (max-width: 1023px){
-	.navbar-menu {
-		display: block;
-		background: transparent;
-		border: 0;
-		padding: 0;
+	a {
+		color: $dark!important;
 	}
 }
