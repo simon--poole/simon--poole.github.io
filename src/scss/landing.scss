@@ -14,7 +14,7 @@
 	align-items: center;
 	position: relative;
 	z-index: 3;
-	background: url('/assets/pattern.png') fixed;
+	background: url('/assets/pattern.png') fixed $light;
 }
 .call-out {
 	position: relative;
