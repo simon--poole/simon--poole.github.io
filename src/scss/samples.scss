@@ -1,0 +1,37 @@
+.projects-header {
+    background: $dark;
+    color: $light;
+    font-family: "Fira Sans";
+    padding: 24px;
+    z-index: 1;
+    position: sticky;
+    top: 0;
+}
+.projects {
+    .col-4 {
+        padding: 24px;
+        background: linear-gradient(0deg, rgba(244,247,245,1) 0%, rgba(255,244,240,1) 100%);
+        z-index: 1;
+        box-shadow: 0 0 5px 0 rgba($dark, .6);
+    }
+    a.h3 {
+        font-family: "Fira Sans";
+        display: inline-block;
+        margin-bottom: 12px;
+    }
+    h4 {
+        margin-bottom: 12px;
+    }
+    .lists-row {
+        margin-left: 24px;
+    }
+    li {
+        margin-bottom: 6px;
+    }
+}
+.sample-1 {
+    background: url('/assets/sample-1.jpg') 100% 145px fixed;
+    /* 8/2 columns = 66.6%, plus a bit of leeway */
+    background-size: 68%;
+    min-height: 800px;
+}
