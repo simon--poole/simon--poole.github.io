@@ -4,11 +4,10 @@
     font-family: "Fira Sans";
     padding: 24px;
     z-index: 1;
-    position: sticky;
-    top: 0;
 }
 .projects {
-    .col-4 {
+    font-size: 12px;
+    .sample-desc {
         padding: 24px;
         background: linear-gradient(0deg, rgba(244,247,245,1) 0%, rgba(255,244,240,1) 100%);
         z-index: 1;
@@ -18,9 +17,14 @@
         font-family: "Fira Sans";
         display: inline-block;
         margin-bottom: 12px;
+        font-size: 1.75em;
+    }
+    .lead {
+        font-size: 1.25em;
     }
     h4 {
         margin-bottom: 12px;
+        font-size: 1.5em;
     }
     .lists-row {
         margin-left: 24px;
@@ -30,8 +34,26 @@
     }
 }
 .sample-1 {
-    background: url('/assets/sample-1.jpg') 100% 145px fixed;
-    /* 8/2 columns = 66.6%, plus a bit of leeway */
-    background-size: 68%;
-    min-height: 800px;
+    background: url('/assets/sample-1.jpg') top fixed;
+    min-height: 500px;
+    background-size: 200%;
+}
+@media screen and (min-width: 768px){
+    .projects-header {
+        position: sticky;
+        top: 0;
+    }
+    .projects {
+        font-size: 14px;
+    }
+    .sample-1 {
+        background: url('/assets/sample-1.jpg') 102% 120px fixed;
+        /* 8/2 columns = 66.6%, plus a bit of leeway */
+        background-size: 68%;
+    }
+}
+@media screen and (min-width: 1200px){
+    .projects {
+        font-size: 16px;
+    }
 }
